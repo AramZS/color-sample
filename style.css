@@ -1,0 +1,310 @@
+/* Theme selector */
+.theme-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 0.875rem;
+  background-color: var(--background-muted);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 11rem;
+}
+
+.theme-picker.is-open {
+  height: 11rem;
+}
+
+.theme-picker h1 {
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.theme-picker nav {
+  position: relative;
+  z-index: 2;
+  scroll-behavior: smooth;
+  width: 100%;
+  display: block;
+  overflow-x: scroll;
+}
+
+.theme-picker ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 1em 40px 2em;
+  text-align: center;
+}
+
+.theme-picker li {
+  border-radius: 0.4em;
+  min-width: 140px;
+  transform: scale(1);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.theme-picker li:hover {
+  box-shadow: 0 0 8px var(--foreground);
+  transform: scale(1.05);
+}
+
+.theme-picker li.current {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.theme-picker li + li {
+  margin-left: 1rem;
+}
+
+.theme-picker li button {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: none;
+  border-radius: 0.4em;
+  padding: 1em;
+  font-size: 0.9em;
+  width: 100%;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.theme-picker .swatches {
+  margin-top: 0.5em;
+  display: block;
+}
+
+.theme-picker .swatches span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.theme-picker .swatches span + span {
+  margin-left: -0.995em;
+}
+
+.theme-picker .swatches span.background {
+  background-color: var(--background);
+}
+
+.theme-picker .swatches span.background-muted {
+  background-color: var(--background-muted);
+}
+
+.theme-picker .swatches span.foreground {
+  background-color: var(--foreground);
+}
+
+.theme-picker .swatches span.foreground-muted {
+  background-color: var(--foreground-muted);
+}
+
+.theme-picker .swatches span.accent {
+  background-color: var(--accent);
+}
+
+html:root,
+html.theme-one,
+.theme-picker li.theme-one {
+    --background: #CEDBD2;
+    --background-muted: #143a39;
+    --foreground: #71301C;
+    --foreground-muted: #f6a578;
+    --accent: #60C40A;
+}
+
+html.theme-two,
+.theme-picker li.theme-two {
+    --background: #143a39;
+    --background-muted: #A84126;
+    --foreground: #EDF3F6;
+    --foreground-muted: #FFE0C5;
+    --accent: #30400f;
+}
+
+html.theme-three,
+.theme-picker li.theme-three {
+    --background: #CEDBD2;
+    --background-muted: #c8a282;
+    --foreground: #21558f;
+    --foreground-muted: #143a39;
+    --accent: #60c40a;
+}
+
+html.theme-four,
+.theme-picker li.theme-four {
+    --background: #142a39;
+    --background-muted: #EDF3F6;
+    --foreground: #6e9abf;
+    --foreground-muted: #edceb1;
+    --accent: #816153;
+}
+
+html.theme-five,
+.theme-picker li.theme-five {
+    --background: #e1e3e5;
+    --background-muted: #ddd169;
+    --foreground: #98cae0;
+    --foreground-muted: #143a39;
+    --accent: #282c2d;
+}
+
+.background {
+  background-color: var(--background);
+}
+.background-text {
+  color: var(--background);
+}
+.background-muted {
+  background-color: var(--background-muted);
+}
+.background-muted-text {
+  color: var(--background-muted);
+}
+.foreground {
+  background-color: var(--foreground);
+}
+.foreground-text {
+  color: var(--foreground);
+}
+.foreground-muted {
+  background-color: var(--foreground-muted);
+}
+.foreground-muted-text {
+  color: var(--foreground-muted);
+}
+.accent {
+  background-color: var(--accent);
+}
+.accent-text {
+  color: var(--accent);
+}
+
+article {
+  margin: 0 auto;
+  width: 70%;
+  height: 85%;
+}
+
+article * {
+  max-width: 100%;
+}
+
+.container {
+  display: block;
+  width: inherit;
+}
+
+section {
+  margin: 8%;
+  background-color: rgb(5, 1, 4);
+  width: calc(100% - 16%);
+  height: calc(100% - 16%);
+  display:block;
+  padding: 14px;
+}
+
+.color-el-display {
+  width: 100%;
+  padding: 10px;
+  border-radius: 35px;
+}
+
+.color-el-display-samples {
+  display: block;
+  clear: both;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.color-el-display .image-container {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  clear: both;
+  contain: paint;
+}
+
+.color-el-display .image-container img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  object-fit: scale-down;
+  border-radius: 35px;
+  padding: 3px;
+  border: 3px var(--background) solid;
+  max-width: 90%;
+  max-height: 30vh;
+}
+
+.color-el {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.color-el.one {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: var(--foreground);
+}
+
+.color-el.two {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background-color: var(--background);
+    box-shadow: var(--foreground) 0px 0px 0px 2px inset;
+}
+
+.color-el.three {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background-image: linear-gradient(45deg, var(--background) 50%, var(--background-muted) 50%);
+    box-shadow: var(--foreground) 0px 0px 0px 2px inset;
+}
+
+.color-el.four {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background-image: linear-gradient(45deg, var(--foreground) 0%, var(--foreground-muted) 100%);
+    box-shadow: var(--background) 0px 0px 0px 2px inset;  
+}
+
+.textbox {
+  padding: 8px;
+}
+
+.spacer {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-image: repeating-linear-gradient(45deg, var(--background), var(--background) 4px, var(--foreground) 4px, var(--foreground) 6px), linear-gradient(90deg, var(--accent) 50%, transparent 50%);
+}
+
+.button-container {
+  margin-top: 32px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.button-container button {
+    appearance: none;
+    border: 0px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+}
