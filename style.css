@@ -116,12 +116,13 @@
 html:root,
 html.theme-one,
 .theme-picker li.theme-one {
-    --background: #CEDBD2;
-    --background-muted: #143a39;
-    --foreground: #71301C;
-    --foreground-muted: #f6a578;
-    --accent: #60C40A;
+    --background: #123332;
+    --background-muted: #FF633A;
+    --foreground: #EDF3F6;
+    --foreground-muted: #FFE0C5;
+    --accent: #B6F239;
 }
+
 
 html.theme-two,
 .theme-picker li.theme-two {
@@ -134,6 +135,60 @@ html.theme-two,
 
 html.theme-three,
 .theme-picker li.theme-three {
+    --background: #EDF3F6;
+    --background-muted: #FFE0C5;
+    --foreground: #143a39;
+    --foreground-muted: #B6F239;
+    --accent: #FF633A;
+}
+
+html.theme-four,
+.theme-picker li.theme-four {
+    --background: #FFE0C5;
+    --background-muted: #EDF3F6;
+    --foreground: #143A39;
+    --foreground-muted: #BAE85B;
+    --accent: #FF973A;
+}
+
+html.theme-five,
+.theme-picker li.theme-five {
+    --background: #BAE85B;
+    --background-muted: #3C9314;
+    --foreground: #381A15;
+    --foreground-muted: #FFE0C5;
+    --accent: #FF973A;
+}
+
+html.theme-six,
+.theme-picker li.theme-six {
+    --background: #381A15;
+    --background-muted: #FFE0C5;
+    --foreground: #BAE85B;
+    --foreground-muted: #102605;
+    --accent: #FF973A;
+}
+
+html.theme-seven,
+.theme-picker li.theme-seven {
+    --background: #5AA60D;
+    --background-muted: #6ABF15;
+    --foreground: #060D05;
+    --foreground-muted: #D9663D;
+    --accent: #8C403A;
+}
+
+html.theme-one-a,
+.theme-picker li.theme-one-a {
+    --background: #CEDBD2;
+    --background-muted: #143a39;
+    --foreground: #71301C;
+    --foreground-muted: #f6a578;
+    --accent: #60C40A;
+}
+
+html.theme-three-a,
+.theme-picker li.theme-three-a {
     --background: #CEDBD2;
     --background-muted: #c8a282;
     --foreground: #21558f;
@@ -141,8 +196,8 @@ html.theme-three,
     --accent: #60c40a;
 }
 
-html.theme-four,
-.theme-picker li.theme-four {
+html.theme-four-a,
+.theme-picker li.theme-four-a {
     --background: #142a39;
     --background-muted: #EDF3F6;
     --foreground: #6e9abf;
@@ -150,8 +205,8 @@ html.theme-four,
     --accent: #816153;
 }
 
-html.theme-five,
-.theme-picker li.theme-five {
+html.theme-five-a,
+.theme-picker li.theme-five-a {
     --background: #e1e3e5;
     --background-muted: #ddd169;
     --foreground: #98cae0;
