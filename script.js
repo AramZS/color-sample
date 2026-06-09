@@ -20,7 +20,7 @@ function setTheme(themeName) {
 
 // Set theme before page renders
 (function () {
-	setTheme(localStorage.getItem("theme") || "alfalfa");
+	setTheme(localStorage.getItem("theme") || "one");
 })();
 
 // When document ready add event listeners
